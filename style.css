@@ -1,0 +1,227 @@
+/* Definindo variáveis de cor para o verde escuro */
+:root {
+    --cor-principal: #1A5243; /* Verde Escuro (Header, Botão) */
+    --cor-secundaria: #347B62; /* Verde Médio (Destaque, Barra de Progresso) */
+    --cor-fundo: #F4F8F7; /* Fundo claro para contraste */
+    --cor-texto: #333333;
+    --cor-borda: #E0E0E0;
+    --cor-cinza-claro: #F9F9F9; /* Novo: Fundo de boxes */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); /* Sombra mais suave e moderna */
+    border-radius: 16px; /* Bordas mais arredondadas */
+    overflow: hidden;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 30px 40px; /* Mais padding */
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.main-info {
+    flex: 2;
+    min-width: 300px;
+    padding-right: 40px;
+    border-right: 1px solid var(--cor-borda);
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 250px;
+    padding-left: 40px;
+    /* Adicionado flex-direction para garantir que os blocos internos fiquem em coluna */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Centraliza o conteúdo lateral (como o botão) */
+}
+
+.section-title {
+    color: var(--cor-principal);
+    border-bottom: 3px solid var(--cor-secundaria);
+    padding-bottom: 5px;
+    margin-top: 30px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+/* --- IMAGEM DE PERFIL --- */
+.profile-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--cor-fundo); 
+    margin: 0 auto 30px 0; /* Alinha a imagem à esquerda no main-info */
+    overflow: hidden;
+    border: 5px solid var(--cor-secundaria); /* Borda da foto mais suave */
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- BOX DE STATUS / ARRECADAÇÃO --- */
+.status-box {
+    width: 100%; /* Garante que o box lateral ocupe todo o espaço */
+    background-color: var(--cor-cinza-claro); /* Fundo sutil */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid var(--cor-borda);
+}
+
+.status-box h3 {
+    color: var(--cor-principal);
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.amount-raised {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--cor-principal); /* Cor principal mais forte */
+    margin-bottom: 0px;
+}
+
+.goal {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* --- BARRA DE PROGRESSO E PORCENTAGEM --- */
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 15px 0;
+    height: 25px; /* Altura maior para o visual moderno */
+    overflow: hidden;
+    position: relative;
+    text-align: left; /* Garante que a porcentagem comece à esquerda */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    width: 5.5%; /* Valor estático */
+    transition: width 0.5s ease;
+    
+}
+
+/* Estilo para a porcentagem flutuante dentro da barra */
+.progress-bar-container::after {
+    position: absolute;
+    top: 0;
+    left: 10px; /* Desloca o texto para a esquerda, dentro da barra */
+    line-height: 25px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--cor-texto); /* Cor escura para a porcentagem */
+    z-index: 10;
+}
+
+/* --- BOTÃO DE DOAÇÃO --- */
+.donate-button {
+    display: block;
+    width: 100%;
+    max-width: 250px; /* Limita a largura do botão para ficar mais elegante no desktop */
+    padding: 15px 0;
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(26, 82, 67, 0.3); /* Sombra no botão */
+}
+
+.donate-button:hover {
+    background-color: #0d3228;
+    transform: translateY(-2px);
+}
+
+.donate-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(26, 82, 67, 0.3);
+}
+
+/* --- DETALHES DA CAMPANHA --- */
+.details-box {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.details-box p {
+    margin: 8px 0;
+}
+
+/* --- AJUSTE RESPONSIVO --- */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .main-info {
+        min-width: 100%;
+        padding-right: 0;
+        border-right: none;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--cor-borda);
+    }
+    
+    .sidebar {
+        min-width: 100%;
+        padding-left: 0;
+        margin-top: 30px;
+        align-items: stretch; /* Garante que os boxes laterais ocupem 100% no mobile */
+    }
+    
+    .profile-image-container {
+        margin: 20px auto 20px auto; /* Centraliza a foto no mobile */
+    }
+    
+    .donate-button {
+        max-width: 100%; /* Botão em largura total no mobile */
+    }
+}
