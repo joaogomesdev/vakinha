@@ -1,7 +1,7 @@
 # 💚 Vaquinha Solidária: Todos Pelo Jaylon Coelho
 
 [![Status da Vaquinha (Fictício)](https://img.shields.io/badge/Arrecadado-5.5%25-red?style=for-the-badge&logoColor=white)](LINK_DA_VAQUINHA_AQUI)
-[![Meta de Arrecadação (Fictício)](https://img.shields.io/badge/Meta-R$%2010.000%2C00-blue?style=for-the-badge&logoColor=white)](LINK_DA_VAQUINHA_AQUI)
+[![Meta de Arrecadação (Fictício)](https://img.shields.io/badge/Meta-R$%2050.000%2C00-blue?style=for-the-badge&logoColor=white)](LINK_DA_VAQUINHA_AQUI)
 
 ## 🌟 Sobre a Campanha
 
